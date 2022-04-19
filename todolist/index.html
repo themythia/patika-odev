@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/javascripttodolist/css/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
@@ -17,7 +17,7 @@
     <div class="mr-1" style="position: relative">
       <div style="position: absolute; top: 0; right: 0">
         <div
-          id="liveToast"
+          id="successToast"
           class="toast success hide"
           role="alert"
           aria-live="assertive"
@@ -77,22 +77,38 @@
       </div>
 
       <ul id="list">
-        <li>3 Litre Su İç</li>
-        <li>Ödevleri Yap</li>
-        <li>En Az 3 Saat Kodlama Yap</li>
-        <li>Yemek Yap</li>
-        <li>50 Sayfa Kitap Oku</li>
+        <li data-id="1" onclick="markAsDone(1)">
+          <span>3 Litre Su İç</span>
+          <span onclick="deleteElement(1)" class="close">x</span>
+        </li>
+        <li data-id="2" onclick="markAsDone(2)">
+          <span>Ödevleri Yap</span>
+          <span onclick="deleteElement(2)" class="close">x</span>
+        </li>
+        <li data-id="3" onclick="markAsDone(3)">
+          <span>En Az 3 Saat Kodlama Yap</span>
+          <span onclick="deleteElement(3)" class="close">x</span>
+        </li>
+        <li data-id="4" onclick="markAsDone(4)">
+          <span>Yemek Yap</span>
+          <span onclick="deleteElement(4)" class="close">x</span>
+        </li>
+        <li data-id="5" onclick="markAsDone(5)">
+          <span>50 Sayfa Kitap Oku</span>
+          <span onclick="deleteElement(5)" class="close">x</span>
+        </li>
       </ul>
-      <script
-        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"
-      ></script>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
   </body>
 </html>
